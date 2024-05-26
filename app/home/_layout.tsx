@@ -31,22 +31,22 @@ const tabs: TabType[] = [
   },
   {
     name: "search",
-    title: "Search",
-    iconOnFocused: "search",
-    icon: "search-outline",
+    title: "Post",
+    iconOnFocused: "compass",
+    icon: "compass-outline",
   },
 
   {
-    name: "favorite",
-    title: "Favorite",
-    iconOnFocused: "bookmark",
-    icon: "bookmark-outline",
+    name: "account",
+    title: "Reel",
+    iconOnFocused: "film",
+    icon: "film-outline",
   },
   {
-    name: "account",
-    title: "Account",
-    iconOnFocused: "person",
-    icon: "person-outline",
+    name: "favorite",
+    title: "Activity",
+    iconOnFocused: "apps-sharp",
+    icon: "apps-sharp",
   },
 ];
 

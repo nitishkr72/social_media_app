@@ -1,17 +1,14 @@
 import { View, Text, ScrollView, TextInput } from "react-native";
 import Feather from "@expo/vector-icons/Feather";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { useState } from "react";
 import { Avatar, useTheme } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Posts from "@/components/posts";
 import Analytics from "@/components/Analytics";
+import { Drawer } from "react-native-paper";
 
 export default function SignIn() {
-  const [text, setText] = useState("");
-  const [secureText, setSecureText] = useState(true);
-  const { colors } = useTheme();
-  const [disabled, setDisabled] = useState(false);
+  const [active, setActive] = useState("");
 
   return (
     <SafeAreaView>
