@@ -5,6 +5,7 @@ import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image, ImageBackground } from "expo-image";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import FormField from "@/components/FormField";
 
 type JOB_TYPE = {
@@ -75,10 +76,6 @@ export default function SignIn() {
             />
           </View>
           <View style={{ padding: 15, marginTop: -220 }}>
-            {/* <View>
-            <Text>🔥Popular Job</Text>
-            <Text>See all</Text>
-          </View> */}
             <View
               style={{
                 display: "flex",
@@ -116,12 +113,80 @@ export default function SignIn() {
             </View>
           </View>
           <View style={{ padding: 15, display: "flex", gap: 8 }}>
-            <JobPost showShortDesc={true} />
-            <JobPost showShortDesc={true} />
-            <JobPost showShortDesc={true} />
-            <JobPost showShortDesc={true} />
-            <JobPost showShortDesc={true} />
-            <JobPost showShortDesc={true} />
+            <View style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Text style={{ fontSize: 18, fontWeight: "600" }}>
+                  🔥 Popular Job
+                </Text>
+                <Text style={{ color: colors.primary }}>See all</Text>
+              </View>
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  padding: 12,
+                  backgroundColor: "#f7f8fb",
+                  alignItems: "center",
+                  borderRadius: 12,
+                }}
+              >
+                <View
+                  style={{ display: "flex", flexDirection: "column", gap: 10 }}
+                >
+                  <Text style={{ fontSize: 18, fontWeight: "600" }}>
+                    Java Developer
+                  </Text>
+                  <Text style={{ fontSize: 12 }}>128 Jobs available</Text>
+                </View>
+                <View
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <Text style={{ fontSize: 15, color: colors.primary }}>
+                    View Jobs
+                  </Text>
+                  <MaterialCommunityIcons
+                    size={20}
+                    name="arrow-top-right"
+                    color={colors.primary}
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 10,
+                marginTop: 10,
+              }}
+            >
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Text style={{ fontSize: 18, fontWeight: "600" }}>
+                  Recommended
+                </Text>
+                <Text style={{ color: colors.primary }}>See all</Text>
+              </View>
+              <JobPost showShortDesc={true} />
+              <JobPost />
+              <JobPost showShortDesc={true} />
+            </View>
           </View>
         </ScrollView>
       </View>
