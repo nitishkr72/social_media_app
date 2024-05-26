@@ -1,11 +1,12 @@
 import FormField from "@/components/FormField";
 import { ImageBackground } from "expo-image";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Avatar, Button } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Link } from "expo-router";
+import { Link, useNavigation, useRouter } from "expo-router";
 import moment from "moment";
+import { useEffect } from "react";
 
 type CREATE_JOBS_TYPE = {
   title: string;
@@ -14,6 +15,11 @@ type CREATE_JOBS_TYPE = {
 };
 
 const jobs: CREATE_JOBS_TYPE[] = [
+  {
+    title: "Java Developer",
+    experienceReq: "3+ Year",
+    createdDate: Date.UTC(2024, 1, 31).toString(),
+  },
   {
     title: "Staff Software Engineer",
     experienceReq: "13+ Year",
@@ -48,11 +54,6 @@ const jobs: CREATE_JOBS_TYPE[] = [
     title: "Accountant",
     experienceReq: "10+ Year",
     createdDate: Date.UTC(2024, 3, 24).toString(),
-  },
-  {
-    title: "Java Developer",
-    experienceReq: "3+ Year",
-    createdDate: Date.UTC(2024, 1, 31).toString(),
   },
 ];
 
@@ -147,8 +148,13 @@ export default function JobsCreate() {
 }
 
 function JobPost({ job }: { job: CREATE_JOBS_TYPE }) {
+  const router = useRouter();
+
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => {
+        router.push("/jobrecuiter/jobsCreate");
+      }}
       style={{
         padding: 20,
         borderWidth: 1,
@@ -240,6 +246,6 @@ function JobPost({ job }: { job: CREATE_JOBS_TYPE }) {
           </Text>
         </Text> */}
       {/* </View> */}
-    </View>
+    </TouchableOpacity>
   );
 }

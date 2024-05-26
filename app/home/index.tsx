@@ -35,13 +35,11 @@ export default function SignIn() {
               gap: 12,
             }}
           >
-            <TouchableOpacity onPress={() => router.push("/jobrecuiter")}>
-              <Avatar.Image
-                size={44}
-                source={require("../../assets/images/man1.png")}
-                style={{ backgroundColor: "#f6f1fc" }}
-              />
-            </TouchableOpacity>
+            <Avatar.Image
+              size={44}
+              source={require("../../assets/images/man1.png")}
+              style={{ backgroundColor: "#f6f1fc" }}
+            />
 
             <View
               style={{

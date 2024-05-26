@@ -1,10 +1,10 @@
 import { ImageBackground } from "expo-image";
-import { Text, View } from "react-native";
+import { Text, Touchable, TouchableOpacity, View } from "react-native";
 import { Avatar, Button, SegmentedButtons, useTheme } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { useState } from "react";
+import { useLocalSearchParams, useNavigation, useRouter } from "expo-router";
 
 type CANDIDATE_TYPE = {
   name: string;
@@ -54,6 +54,7 @@ const candidates: CANDIDATE_TYPE[] = [
 
 export default function JobRecuiterSingleJob() {
   const { colors } = useTheme();
+  const router = useRouter();
 
   return (
     <SafeAreaView>
@@ -75,7 +76,9 @@ export default function JobRecuiterSingleJob() {
               gap: 12,
             }}
           >
-            <Ionicons size={30} name="arrow-back-sharp" color={"white"} />
+            <TouchableOpacity onPress={() => router.back()}>
+              <Ionicons size={30} name="arrow-back-sharp" color={"white"} />
+            </TouchableOpacity>
             <Text style={{ color: "white", fontSize: 20, fontWeight: "600" }}>
               Java Developer
             </Text>

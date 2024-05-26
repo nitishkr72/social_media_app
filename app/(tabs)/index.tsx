@@ -1,6 +1,6 @@
 import FormField from "@/components/FormField";
 import { HelloWave } from "@/components/HelloWave";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { useState } from "react";
 import { View, Text } from "react-native";
 import { Button, useTheme } from "react-native-paper";
@@ -8,6 +8,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const [disabled, setDisabled] = useState(false);
+  const route = useRouter();
 
   const { colors } = useTheme();
 
@@ -55,18 +56,16 @@ export default function HomeScreen() {
             </Text>
           </View>
         </View>
-        <Link href={{ pathname: "/home/" }} asChild>
-          <Button
-            style={{ borderRadius: 10, marginTop: 44 }}
-            mode="contained"
-            onPress={() => console.log("Pressed")}
-            textColor={colors.onPrimary}
-            disabled={disabled}
-            buttonColor={disabled ? colors.primary : colors.primary}
-          >
-            Sign In
-          </Button>
-        </Link>
+        <Button
+          style={{ borderRadius: 10, marginTop: 44 }}
+          mode="contained"
+          onPress={() => route.replace("/home/")}
+          textColor={colors.onPrimary}
+          disabled={disabled}
+          buttonColor={disabled ? colors.primary : colors.primary}
+        >
+          Sign In
+        </Button>
         <View
           style={{
             display: "flex",

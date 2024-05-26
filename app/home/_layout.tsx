@@ -2,10 +2,7 @@ import { Tabs } from "expo-router";
 import React from "react";
 
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
-import { Colors } from "@/constants/Colors";
-import { useColorScheme } from "@/hooks/useColorScheme";
 import { Text, View } from "react-native";
-import { yellow100 } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 import { useTheme } from "react-native-paper";
 
 type TabType = {
@@ -65,7 +62,6 @@ export default function TabLayout() {
             key={index}
             name={item.name}
             options={{
-              unmountOnBlur: true,
               tabBarIcon: ({ color, focused }) => (
                 <View style={{ marginTop: 10 }}>
                   <TabBarIcon
@@ -85,20 +81,7 @@ export default function TabLayout() {
               },
               tabBarStyle: {
                 height: 70,
-                //     backgroundColor: "yellow",
-                //     padding: 0,
-                //     margin: 0,
-                //     display: "flex",
-                //     flexDirection: "row",
-                //     gap: 0,
               },
-              //   tabBarItemStyle: {
-              //     padding: 0,
-              //     margin: 0,
-              //     display: "flex",
-              //     flexDirection: "column",
-              //     gap: -100,
-              //   },
             }}
           />
         );

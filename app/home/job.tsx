@@ -1,12 +1,12 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 
 import { Avatar, Button, useTheme } from "react-native-paper";
-import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Image, ImageBackground } from "expo-image";
+import { ImageBackground } from "expo-image";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import FormField from "@/components/FormField";
+import { useRouter } from "expo-router";
 
 type JOB_TYPE = {
   name: string;
@@ -42,11 +42,9 @@ const jobs: JOB_TYPE = {
   location: "Bengaluru, India",
 };
 
-export default function SignIn() {
-  const [text, setText] = useState("");
-  const [secureText, setSecureText] = useState(true);
+export default function Job() {
   const { colors } = useTheme();
-  const [disabled, setDisabled] = useState(false);
+  const router = useRouter();
 
   return (
     <SafeAreaView>
@@ -57,15 +55,35 @@ export default function SignIn() {
               position: "absolute",
               zIndex: 100,
               width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              top: 40,
+              top: 10,
             }}
           >
-            <Text style={{ fontSize: 24, color: "white", fontWeight: "600" }}>
-              Explore Jobs
-            </Text>
+            <TouchableOpacity
+              onPress={() => router.push("/jobrecuiter/")}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-end",
+                paddingHorizontal: 15,
+                alignItems: "center",
+                gap: 7,
+              }}
+            >
+              <Ionicons size={28} name="add-circle-outline" color={"white"} />
+              <Text style={{ color: "white" }}>Add Job Post</Text>
+            </TouchableOpacity>
+            <View
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: 25,
+              }}
+            >
+              <Text style={{ fontSize: 24, color: "white", fontWeight: "600" }}>
+                Explore Jobs
+              </Text>
+            </View>
           </View>
           <View style={{ height: 320, overflow: "hidden" }}>
             <ImageBackground
