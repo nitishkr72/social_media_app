@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderRadius: 12,
-    fontSize: 20,
+    fontSize: 15,
     color: "#301ca5",
   },
   foused: {

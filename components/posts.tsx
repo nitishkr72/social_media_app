@@ -47,7 +47,7 @@ const posts: POST_TYPE[] = [
     imageUrls: [],
     postImageType: "URI",
     postImage:
-      "https://raw.githubusercontent.com/nitishkr72/temporary/main/postImage1.jpg",
+      "https://raw.githubusercontent.com/nitishkr72/social_media_app/main/assets/images/postImage1.jpg",
   },
 ];
 
