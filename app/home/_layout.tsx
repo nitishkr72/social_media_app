@@ -6,6 +6,7 @@ import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { Text, View } from "react-native";
 import { yellow100 } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
+import { useTheme } from "react-native-paper";
 
 type TabType = {
   name: string;
@@ -50,12 +51,11 @@ const tabs: TabType[] = [
 ];
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+  const { colors } = useTheme();
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: colors.primary,
         headerShown: false,
       }}
     >
