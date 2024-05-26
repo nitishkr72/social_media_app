@@ -1,4 +1,10 @@
-import { View, Text, ScrollView, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import Feather from "@expo/vector-icons/Feather";
 import { useState } from "react";
 import { Avatar, useTheme } from "react-native-paper";
@@ -6,10 +12,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Posts from "@/components/posts";
 import Analytics from "@/components/Analytics";
 import { Drawer } from "react-native-paper";
+import { Link, useRouter } from "expo-router";
 
 export default function SignIn() {
   const [active, setActive] = useState("");
 
+  const router = useRouter();
   return (
     <SafeAreaView>
       <View style={{ width: "100%", backgroundColor: "white" }}>
@@ -27,11 +35,13 @@ export default function SignIn() {
               gap: 12,
             }}
           >
-            <Avatar.Image
-              size={44}
-              source={require("../../assets/images/man1.png")}
-              style={{ backgroundColor: "#f6f1fc" }}
-            />
+            <TouchableOpacity onPress={() => router.push("/jobrecuiter")}>
+              <Avatar.Image
+                size={44}
+                source={require("../../assets/images/man1.png")}
+                style={{ backgroundColor: "#f6f1fc" }}
+              />
+            </TouchableOpacity>
 
             <View
               style={{

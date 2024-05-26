@@ -5,7 +5,6 @@ import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Avatar, Surface, useTheme } from "react-native-paper";
 import moment from "moment";
 import { Image } from "expo-image";
-import Svg, { LinearGradient, Defs, Stop, Rect } from "react-native-svg";
 
 type POST_TYPE = {
   postDesc: string;

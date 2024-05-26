@@ -1,19 +1,20 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import { HelloWave } from "@/components/HelloWave";
-import { Button, TextInput, useTheme } from "react-native-paper";
-import { useState } from "react";
-import { Link } from "expo-router";
-
-export default function SignIn() {
-  const [text, setText] = useState("");
-  const [secureText, setSecureText] = useState(true);
-  const { colors } = useTheme();
-  const [disabled, setDisabled] = useState(false);
-
+export default function Search() {
   return (
-    <View>
-      <Text>Hello</Text>
-    </View>
+    <SafeAreaView>
+      <View
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Text>This is Demo App...</Text>
+      </View>
+    </SafeAreaView>
   );
 }

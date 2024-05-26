@@ -12,7 +12,7 @@ export default function FormField({
 }) {
   return (
     <View style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-      <Text style={{ fontSize: 16, fontWeight: "600", color: "#454545" }}>
+      <Text style={{ fontSize: 12, fontWeight: "600", color: "#454545" }}>
         {label}
       </Text>
       <InputWrapper

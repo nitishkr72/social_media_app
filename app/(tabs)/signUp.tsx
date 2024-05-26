@@ -1,5 +1,4 @@
 import FormField from "@/components/FormField";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import { Link } from "expo-router";
 import { useState } from "react";
 import { Text, View } from "react-native";
