@@ -66,6 +66,7 @@ export default function ReelListView() {
           {reels.map((item, index) => {
             return (
               <View
+                key={index}
                 style={{
                   borderWidth: 2,
                   borderRadius: 100,

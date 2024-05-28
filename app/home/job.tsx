@@ -60,20 +60,6 @@ export default function Job() {
               top: 10,
             }}
           >
-            <TouchableOpacity
-              onPress={() => router.push("/jobrecuiter/")}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "flex-end",
-                paddingHorizontal: 15,
-                alignItems: "center",
-                gap: 7,
-              }}
-            >
-              <Ionicons size={28} name="add-circle-outline" color={"white"} />
-              <Text style={{ color: "white" }}>Add Job Post</Text>
-            </TouchableOpacity>
             <View
               style={{
                 display: "flex",
