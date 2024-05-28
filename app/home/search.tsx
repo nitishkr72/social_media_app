@@ -11,6 +11,7 @@ export default function Search() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor: "white",
         }}
       >
         <Text>This is Demo App...</Text>

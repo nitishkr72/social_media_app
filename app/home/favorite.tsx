@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Header } from ".";
 
 export default function Activity() {
   return (
@@ -8,12 +9,10 @@ export default function Activity() {
         style={{
           width: "100%",
           height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          backgroundColor: "white",
         }}
       >
-        <Text>This is Demo App...</Text>
+        <Header />
       </View>
     </SafeAreaView>
   );

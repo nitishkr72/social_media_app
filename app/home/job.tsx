@@ -7,6 +7,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import FormField from "@/components/FormField";
 import { useRouter } from "expo-router";
+import { Header } from ".";
 
 type JOB_TYPE = {
   name: string;
@@ -49,6 +50,7 @@ export default function Job() {
   return (
     <SafeAreaView>
       <View style={{ width: "100%", height: "100%", backgroundColor: "white" }}>
+        <Header />
         <ScrollView>
           <View
             style={{
